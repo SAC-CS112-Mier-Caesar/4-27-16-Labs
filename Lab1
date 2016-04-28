@@ -1,0 +1,62 @@
+import java.util.Scanner;	
+public class Car {
+
+ 	public static void main(String[] args) {
+      
+ 		Scanner input = new Scanner(System.in);
+ 		Automobile car1 = new Automobile(4,4);
+ 		car1.setTransmission(5);
+ 		car1.setColor("Yellow");
+ 		car1.setName("Cabbie");
+ 		car1.about();
+ 		
+ 		Automobile car2 = new Automobile(2,8,4);
+ 		car2.setColor("Red");
+ 		car2.setName("Sporty");
+ 		car2.about();
+ 		
+ 		Automobile car3 = new Automobile(5,5);
+ 		car3.setTransmission(6);
+ 		car3.setColor("green");
+ 		car3.setName("Vany");
+ 		car3.about();
+ 	}
+}
+
+// end main
+
+public class Automobile{
+	private int doors;
+	private int cylinders;
+	private int trans;
+	private String color;
+	private String name;
+	
+	public Automobile(int doors, int cylinders){
+		this.doors = doors;
+		this.cylinders = cylinders;
+	}
+	public Automobile(int doors, int cylinders, int trans){
+		
+		this.doors = doors;
+		this.cylinders = cylinders;
+		this.trans = trans;
+	}
+	
+	public void setTransmission(int trans){
+		this.trans = trans;
+	}
+	
+	public void setColor(String color){
+		this.color = color;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public void about(){
+		System.out.printf("A %s %d door with %d cylinders that has %d gears named %s.\n", color, doors, cylinders, trans, name);
+	}
+	
+}
